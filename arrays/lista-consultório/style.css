@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    background-color: rgb(80, 80, 218);
+}
+
+main{
+    width: 80vw;
+    margin: auto;
+    background-color: white;
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.493);
+    overflow: hidden;
+}
+
+main > div#img{
+    float: left;
+    margin-right: 20px;
+}
+
+main > section{
+    width: 80%;
+}
+
+#entrada, #saida{
+    text-align: center;
+    margin: 20px 0px;
+}
+
+#entrada > h1{
+    font-size: 2em;
+    margin: 20px 0px;
+}
+
+#entrada > input[type=button]{
+    padding: 5px;
+    font-weight: bold;
+}
