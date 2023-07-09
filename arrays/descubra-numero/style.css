@@ -28,8 +28,12 @@ main > div#img{
     margin-right: 20px;
 }
 
-div#img > img{
+div#img > #img-pc{
     height: 350px;
+}
+
+div#img > #img-mobile{
+    display: none;
 }
 
 main > section{
@@ -51,6 +55,10 @@ main > section{
     font-weight: bold;
 }
 
+#ng{
+    display: none;
+}
+
 #paciente{
     margin: 16px 0px;
     text-align: left;
@@ -62,6 +70,28 @@ main > section{
 }
 
 #saida > p{
+    font-size: 1.2em;
     font-weight: bold;
     margin: 16px 0px;
+}
+
+@media screen and (max-width: 980px) {
+    main > div#img{
+        float: none;
+        margin: auto;
+        width: 80%;
+    }  
+
+    main > section{
+        width: 100%;
+    }
+    
+    div#img > #img-pc{
+        display: none;
+    }
+
+    div#img > #img-mobile{
+        display: block;
+        width: 100%;
+    }
 }
