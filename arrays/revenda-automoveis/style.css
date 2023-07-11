@@ -21,6 +21,7 @@ main{
     border-radius: 10px;
     box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.493);
     overflow: hidden;
+    text-align: center;
 }
 
 #entrada{
@@ -41,9 +42,10 @@ main{
 }
 
 #saida{
+    display: inline-block;
     text-align: center;
     padding: 5px;
     margin: 20px 0px;
     font-weight: bold;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.445);
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.445);
 }
