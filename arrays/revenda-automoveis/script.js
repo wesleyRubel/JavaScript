@@ -28,9 +28,10 @@ function adicionar() {
     var m = mod.value
     var p = Number(pre.value)
     carros.push({ modelo: m, preco: p })
-    for (var i = 0; i < carros.length; i++) {
+    /*for (var i = 0; i < carros.length; i++) {
         res.innerHTML += `${carros[i].modelo} - R$: ${carros[i].preco} <br><br>`
-    }
+    }*/
+    listar()
     mod.value = ''
     mod.focus()
     pre.value = ''
