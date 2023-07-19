@@ -44,3 +44,11 @@ function listar(){
     window.document.querySelector('input#idade').value = ''
     window.document.querySelector('input#nome').focus()  
 }
+
+function filtrar(){
+    if(criancas.length == 0){
+        window.alert('Não existem crianças cadastradas')
+        return
+    }   
+     
+}
