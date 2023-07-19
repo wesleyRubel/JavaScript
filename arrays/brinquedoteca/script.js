@@ -74,7 +74,7 @@ function filtrar(){
                 nomes += `${criancas[j].nam}, `
             }
         }
-        per = numIdade/criancas.length
+        per = numIdade/criancas.length*100
         lista.innerHTML += `${idades[i]} ano(s): ${numIdade} criança(s) - ${per.toFixed(2)}% <br> (${nomes}) <br><br>`
     }
 }
