@@ -1,4 +1,5 @@
 var criancas = [] //Vetor global de objetos
+var idades = [] //Vetor global para guardar as idades
 
 function validar(v, i) {
     if (v.length == 0 || i.length == 0) {
@@ -25,12 +26,16 @@ function adicionar() {
     var n = nome.value
     var i = Number(idade.value)
     criancas.push({nam:n,id:i})
+    if(idades.indexOf(i) == -1){
+        idades.push(i)
+    }
     listar()
 }
 
 function listar(){
     if(criancas.length == 0){
         window.alert('Não existem crianças cadastradas')
+        window.document.querySelector('input#nome').focus() 
         return
     }
     var saida = window.document.querySelector('div#saida')
@@ -48,7 +53,28 @@ function listar(){
 function filtrar(){
     if(criancas.length == 0){
         window.alert('Não existem crianças cadastradas')
+        window.document.querySelector('input#nome').focus() 
         return
-    }   
-     
+    } 
+    var saida = window.document.querySelector('div#saida')
+    saida.innerHTML = ''
+    var lista = window.document.createElement('p')
+    saida.appendChild(lista)
+    var numIdade
+    var nomes  
+    var per 
+    idades.sort(function(a,b){return a-b})
+    for(var i = 0;i < idades.length;i++){
+        per = 0
+        numIdade = 0
+        nomes = ''
+        for(var j = 0;j < criancas.length;j++){
+            if(idades[i] == criancas[j].id){
+                numIdade++
+                nomes += `${criancas[j].nam}, `
+            }
+        }
+        per = numIdade/criancas.length
+        lista.innerHTML += `${idades[i]} ano(s): ${numIdade} criança(s) - ${per.toFixed(2)}% <br> (${nomes}) <br><br>`
+    }
 }
